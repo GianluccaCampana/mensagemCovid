@@ -25,7 +25,7 @@ app.use ((req, res, next) => {
 
 app.post ('/api/mensagens', (req, res, next) => {
   const mensagem = req.body;
-  console.log(mensagem);
+  mensagens.push(mensagem);
   res.status(201).json({mensagem: 'Mensagem inserida'})
 });
 
