@@ -1,0 +1,11 @@
+<mat-accordion *ngIf="mensagens.length >0">
+  <mat-expansion-panel *ngFor="let mensagem of mensagens">
+    <mat-expansion-panel-header>Mensagem:</mat-expansion-panel-header>
+    <p>{{ hoje | date:'dd/MM/yyyy - HH:mm' }}</p>
+    <p>{{mensagem.mensagem}}</p>
+
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="mat-body-1" style="text-align: center;" *ngIf="mensagens.length <= 0">
+  Nenhuma mensagem cadastrado
+  </p>

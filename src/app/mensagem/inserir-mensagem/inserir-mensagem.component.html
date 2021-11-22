@@ -1,0 +1,14 @@
+<mat-card>
+  <form (submit)="onAdicionarMensagem(mensagemForm)"  #mensagemForm = "ngForm">
+    <mat-form-field>
+      <input required minlength="3" type="text" matInput
+      placeholder="Inserir mensagem"
+      name = "mensagem"
+      ngModel
+      #mensagemValidacao ="ngModel"/>
+      <mat-error *ngIf="mensagemValidacao.invalid">Mensagem inválida</mat-error>
+
+    </mat-form-field>
+    <button  color="primary"  mat-raised-button  >Inserir Mensagem</button>
+  </form>
+</mat-card>
