@@ -1,9 +1,12 @@
 <mat-card>
+  <!--#mensagemForm faz referênca ao form inteiro-->
   <form (submit)="onAdicionarMensagem(mensagemForm)"  #mensagemForm = "ngForm">
     <mat-form-field>
+      <!--name para fazer referencia ao arquivo .ts-->
+      <!--ngModel significa que é um campo do formulário para fazer a verificação-->
       <input required minlength="3" type="text" matInput
       placeholder="Inserir mensagem"
-      name = "mensagem"
+      name = "mensagem" 
       ngModel
       #mensagemValidacao ="ngModel"/>
       <mat-error *ngIf="mensagemValidacao.invalid">Mensagem inválida</mat-error>

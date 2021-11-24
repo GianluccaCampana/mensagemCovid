@@ -1,18 +1,12 @@
+//criou servidor
 const express = require ('express');
 const app = express();
 const bodyParser = require ('body-parser');
 
-app.use (bodyParser.json());
+app.use (bodyParser.json()); //converte para formato json
 
 const mensagens = [
-  {
-    id: '1',
-    mensagem: 'Use Máscara!',
-  },
-  {
-    id: '2',
-    mensagem: 'Vacine-se o quanto antes possível!',
-  }
+  
 ]
 
 app.use ((req, res, next) => {

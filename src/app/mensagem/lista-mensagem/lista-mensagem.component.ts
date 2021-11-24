@@ -25,7 +25,8 @@ export class ListaMensagemComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.mensagemService.getMensagens();
-    this.mensagensSubscription = this.mensagemService.getListaDeMensagensAtualizadaObservable().subscribe((mensagens: Mensagem[])=>{
+    this.mensagensSubscription = this.mensagemService.getListaDeMensagensAtualizadaObservable()
+    .subscribe((mensagens: Mensagem[])=>{
       this.mensagens = mensagens;
     });
   }

@@ -2,9 +2,10 @@ import { Mensagem } from './mensagem.model';
 import { Injectable } from '@angular/core';
 import {Subject} from 'rxjs'
 import { HttpClient } from '@angular/common/http';
-//tornando providers
+
+// tornando a class injetável
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root' //tornando providers
 })
 export class MensagemService {
 
@@ -31,7 +32,7 @@ export class MensagemService {
       (dados) => {
         console.log(dados.mensagem);
         this.mensagens.push(mensagem);
-        this.listaMensagensAtualizada.next([...this.mensagens]);
+        this.listaMensagensAtualizada.next([...this.mensagens]); 
       }
     )
   }
